@@ -2,7 +2,7 @@
 千牛主播（tblive）
 ====
 
-tblive开源项目对应的产品是千牛主播，是一个独立的PC端主播工具，基于开源软件OBS Studio(https://github.com/jp9000/obs-studio)来修改定制，增强可用性，同时引入统一登陆sdk（UnifiedAuthSDK.dll），可以支持淘宝账号的验证以及免登url的拼接，能更好的支持淘系的二方webview页面。
+tblive开源项目对应的产品是**千牛主播**，是一个独立的PC端主播工具，基于开源软件OBS Studio([https://github.com/jp9000/obs-studio](https://github.com/jp9000/obs-studio))来修改定制，增强可用性，同时引入统一登陆sdk（UnifiedAuthSDK.dll），可以支持淘宝账号的验证以及免登url的拼接，能更好的支持淘系的二方webview页面。
 
 
 ## Windows下开发环境
