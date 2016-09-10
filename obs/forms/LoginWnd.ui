@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>LoginWnd</class>
+ <widget class="QMainWindow" name="LoginWnd">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>280</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>400</width>
+    <height>280</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>400</width>
+    <height>280</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Login.WindowTitle</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget {
+font-family:&quot;微软雅黑&quot;;
+}
+QWidget#centralwidget {
+background-image: url(:/res/images/login_bak.png);
+background-repeat: no-repeat;
+border: 1px solid #999999;
+border-radius: 3px;
+}
+QComboBox#userList, QLineEdit#passwordEdit {
+background: white;
+border:1px solid #d6d6d6;
+border-radius: 3px;
+}
+QComboBox#userList:focus, QLineEdit#passwordEdit:focus {
+border: 1px solid rgb(86,136,171);
+}
+QComboBox#userList::drop-down {
+border: none;
+}
+QComboBox#userList::down-arrow {
+image: url(:/res/images/login_down_arrow.png);  
+}
+QComboBox#userList QAbstractItemView {
+border:1px solid #d6d6d6;
+border-radius: 3px;
+}
+QCheckBox {
+font-size:12px;
+color:#666666;
+}
+QPushButton#loginButton {
+border-image: url(:/res/images/login_button_bak.png);
+color:#ffffff;
+font-size: 14px;
+border: none;
+}
+QPushButton#loginButton:hover {
+border-image: url(:/res/images/login_button_bak_hover.png);
+} 
+QPushButton#loginButton:disabled {
+border-image: url(:/res/images/login_button_bak_disable.png);
+}
+QPushButton#closeButton {
+background-color: transparent;
+border-image: url(:/res/images/login_close.png);
+background-repeat: no-repeat;
+}
+QPushButton#closeButton:hover {
+border-image: url(:/res/images/login_close_hover.png);
+}
+QPushButton#minButton {
+background-color: transparent;
+border-image: url(:/res/images/login_min.png);
+background-repeat: no-repeat;
+}
+QPushButton#minButton:hover {
+border-image: url(:/res/images/login_min_hover.png);
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <widget class="QLineEdit" name="passwordEdit">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>168</y>
+      <width>220</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>微软雅黑</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="placeholderText">
+     <string>Login.PasswordEditHolder</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="loginButton">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>228</y>
+      <width>220</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Login.LoginButton</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="savePsdCheckBox">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>206</y>
+      <width>81</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="text">
+     <string>Login.SavePsd</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="autoLoginCheckBox">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>206</y>
+      <width>81</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="text">
+     <string>Login.AutoLogin</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="userList">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>132</y>
+      <width>220</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="font">
+     <font>
+      <family>微软雅黑</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="editable">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="closeButton">
+    <property name="geometry">
+     <rect>
+      <x>371</x>
+      <y>0</y>
+      <width>28</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>24</width>
+      <height>24</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QLabel" name="loginLogoLabel">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>42</y>
+      <width>196</width>
+      <height>54</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="obs.qrc">:/res/images/login_logo.png</pixmap>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="minButton">
+    <property name="geometry">
+     <rect>
+      <x>345</x>
+      <y>0</y>
+      <width>28</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>24</width>
+      <height>24</height>
+     </size>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>userList</tabstop>
+  <tabstop>passwordEdit</tabstop>
+  <tabstop>savePsdCheckBox</tabstop>
+  <tabstop>autoLoginCheckBox</tabstop>
+  <tabstop>loginButton</tabstop>
+ </tabstops>
+ <resources>
+  <include location="obs.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>closeButton</sender>
+   <signal>clicked()</signal>
+   <receiver>LoginWnd</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>387</x>
+     <y>11</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>199</x>
+     <y>139</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>minButton</sender>
+   <signal>clicked()</signal>
+   <receiver>LoginWnd</receiver>
+   <slot>showMinimized()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>361</x>
+     <y>11</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>199</x>
+     <y>139</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

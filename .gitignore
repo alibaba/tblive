@@ -1,0 +1,16 @@
+.DS_Store
+.idea
+*.log
+*.tlog
+*.sdf
+*.opensdf
+*.suo
+*.user
+*.ilk
+*.o
+*.obj
+*.pch
+*.idb
+*.exp
+additional_install_files/
+build/

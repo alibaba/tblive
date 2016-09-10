@@ -1,0 +1,24 @@
+{
+	"service_list" : [
+		{
+			"biz": "taobaojiaoyu",
+			"service" : "淘宝教育",
+			"main_url" : ""
+		},
+		{
+			"biz": "qianniutoutiao",
+			"service" : "千牛头条",
+			"main_url" : ""
+		},
+		{
+			"biz": "taobaoyouxi",
+			"service" : "淘宝游戏",
+			"main_url" : ""
+		},
+		{
+			"biz": "pxwaimaoxueyuan",
+			"service" : "培训外贸学院",
+			"main_url" : ""
+		}
+	]
+}
