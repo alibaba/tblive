@@ -10,7 +10,7 @@ NS_SERIALIZATION_LITE_BEGIN
 #endif
 
 //////////////////////////////////////////////////////////////////////////
-// 用来描述一个序列化成员的结构，描述了序列化时的名、值、初始值、附加信息等。可以被用在成员变量、普通变量、基类等多种地方。
+// 用来描述一个序列化成员的结构，描述了序列化时的名、值、初始值、附加信息等。可以被用在成员变量、普通变量、基类等多种地方。  
 template <typename OwnerType, size_t offset, typename CharType, typename ValueType, typename InitType>
 struct member_nvio
 {
