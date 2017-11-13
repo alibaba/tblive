@@ -8,7 +8,7 @@
 
 namespace json {
 
-// 从结构对象 转为 json对象
+// 从结构对象 转为 json对象  
 template<typename T>
 inline scoped_ptr<base::Value> JsonFromClass( T const& val )
 {
@@ -26,7 +26,7 @@ inline void JsonFromClass( scoped_ptr<base::Value>& obj, T const& val )
 	os & val;
 }
 
-// 从json对象 转为 结构对象
+// 从json对象 转为 结构对象  
 template<typename T>
 inline void JsonToClass( scoped_ptr<base::Value> const& obj, T & val )
 {
@@ -34,7 +34,7 @@ inline void JsonToClass( scoped_ptr<base::Value> const& obj, T & val )
 	is & val;
 }
 
-// 从结构对象 转为 json字符串
+// 从结构对象 转为 json字符串  
 template<typename T>
 inline std::string JsonStrFromClass( T const& val, bool formated = false )
 {
@@ -60,7 +60,7 @@ inline std::string JsonStrFromClass( T const& val, bool formated = false )
   return json;
 }
 
-// 从json字符串 转为 结构对象
+// 从json字符串 转为 结构对象  
 template<typename T>
 inline bool JsonStrToClass( std::string const& json_str, T & val )
 {
@@ -88,9 +88,9 @@ inline bool JsonStrToClass( std::wstring const& wide_json_str, T & val )
 }
 
 
-// 以下两个函数涉及文件同步操作，UI上不要用
+// 以下两个函数涉及文件同步操作，UI上不要用  
 	
-// 从结构对象 转为 json文件
+// 从结构对象 转为 json文件  
 template<typename T>
 inline bool JsonFileFromClass( base::FilePath file_path, T const& val, bool formated = true )
 {
@@ -98,7 +98,7 @@ inline bool JsonFileFromClass( base::FilePath file_path, T const& val, bool form
 	return (file_util::WriteFile(file_path, fileData.c_str(), (int)fileData.size()) != -1);
 }
 
-// 从json字符串 转为 结构对象
+// 从json字符串 转为 结构对象  
 template<typename T>
 inline bool JsonFileToClass( base::FilePath file_path, T & val )
 {
